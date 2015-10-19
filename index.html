@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <style>
+        .body {
+            width: 600px;
+            height: 1000px;
+            background: url(img/sea.jpg);
+            background-size: 1000px 600px;
+            background-repeat: no-repeat;
+            position:relative;
+            
+        }
+        
+        
+        
+       .fish1 img{
+           top:400px;
+            left:550px;
+           width:50px;
+           position:absolute;
+           transition: all 10s linear;
+           -webkit-animation: fishmove 10s infinite;
+            }
+        
+        @-webkit-keyframes fishmove {
+            0% {
+                top:400px;
+                left:550px;
+            }
+            
+            50%{
+                transform: scaleX(1);
+                top:400px;
+                left:0px;
+            }
+            
+            51%{
+                transform: scaleX(-1);
+                top:400px;
+                left:0px;
+            }
+            
+            100%{
+                transform: scaleX(-1);
+                top:400px;
+                left:550px;
+            }
+        }
+        
+    
+  
+    
+        .fish2 img{
+            top:300px;
+            left:550px;
+           width:50px;
+           position:absolute;
+                  transition: all 5s linear;
+           -webkit-animation: fish1move 5s infinite;
+            }
+        
+        @-webkit-keyframes fish1move {
+            0% {
+               top:300px;
+                left:550px;
+            }
+            
+            50%{
+                transform: scaleX(1);
+                top:300px;
+                left:0px;
+            }
+            
+            51%{
+                transform: scaleX(-1);
+                top:300px;
+                left:0px;
+            }
+            
+            100%{
+                transform: scaleX(-1);
+                top:300px;
+                left:550px;
+            }
+        }
+        
+        .fish3 img{
+            top:350px;
+            left:300px;
+            width:100px;
+            position:absolute;
+            transition: all 15s linear;
+           -webkit-animation: fish2move 15s infinite;
+            }
+        
+        @-webkit-keyframes fish2move {
+            0% {
+              top:350px;
+            left:300px;
+            }
+            
+            50%{
+                transform: scaleX(1) rotate(-45deg);
+                top:500px;
+                left:0px;
+            }
+            
+            51%{
+                transform: scaleX(-1);
+                top:500px;
+                left:0px;
+            }
+            
+            100%{
+                transform: scaleX(-1);
+                top:350px;
+                left:300px;
+            }
+        }
+        
+        .fish4 img{
+            top:500px;
+            left:0px;
+            width:200px;
+            position:absolute;
+                  transition: all 10s linear;
+           -webkit-animation: fish3move 10s infinite;
+            }
+        
+        @-webkit-keyframes fish3move {
+            0% {
+              top:500px;
+                left:0px;
+            }
+            
+            50%{
+                transform: rotate(-30deg);
+                top:80px;
+                left:250px;
+            }
+            
+            51%{
+                transform: rotate(60deg);
+               op:80px;
+                left:250px;
+            }
+            
+            76%{
+                transform: scaleX(1);
+                top:500px;
+                left:500px;
+            }
+            
+            77%{
+                top:500px;
+                left:500px;
+                transform: scaleX(-1);
+                
+            }
+            
+            100%{
+                top:500px;
+                left:0px;
+                transform: scaleX(-1);
+            }
+        }
+        
+        .fish5 img{
+            top:240px;
+            left:0px;
+            width:80px;
+            position:absolute;
+      transition: all 10s linear;
+           -webkit-animation: fish4move 10s infinite;
+            }
+        
+        @-webkit-keyframes fish4move {
+            0% {
+                top:240px;
+                left:0px;
+            }
+            
+            50%{
+                transform: scaleX(1);
+                top:240px;
+                left:100px;
+            }
+            
+            51%{
+                transform: scaleX(-1);
+               top:240px;
+                left:100px;
+            }
+            
+            100%{
+                transform: scaleX(-1);
+                top:240px;
+                left:0px;
+            }
+        }
+        
+        .sun {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ffcc00;
+            position: relative;
+            top:10px;
+            left:500px;
+        }
+        
+        .rain {
+            top:0px;
+            left:0px;
+            position: absolute;
+            
+        }
+        
+        .body:hover .sun {
+            background-color: black;
+            transition: background-color 2s ease-in;
+        }
+        
+        .body:hover .rain {
+            left:300px;
+            transition: left 3s ease-in;    
+        }
+        
+        
+            
+        
+        
+    </style>
+       
+       
+    <body>
+        <div class="body">
+        <div class="fish1"><img src="img/fish1.png" alt=""></div>
+        <div class="fish2"><img src="img/fish2.png" alt=""></div>
+        <div class="fish3"><img src="img/fish3.png" alt=""></div>
+        <div class="fish4"><img src="img/fish4.png" alt=""></div>
+        <div class="fish5"><img src="img/fish5.png" alt=""></div>
+        <div class="sun"></div>
+        <div class="rain"><img src="img/rain.gif" alt=""></div>
+        </div>
+        
+ 
+        
+    
+      
+        <script src="js/main.js"></script>
+    </body>
+</html>
